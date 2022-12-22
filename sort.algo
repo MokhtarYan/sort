@@ -1,0 +1,22 @@
+ALGORITHM algorithm_name
+VAR
+n: INTEGER;
+    arr : ARRAY OF INTEGER[n];
+BEGIN
+Read (n);
+FOR i FROM 0 TO n-1 STEP 1  DO
+    IF (arr[i]>=arr[i+1]) THEN
+        c:=arr[i];
+        arr[i]:=arr[i+1];
+        arr[i+1]:=c;
+    END_IF
+END_FOR
+FOR i FROM n-1 TO 0 STEP -1  DO
+     IF (arr[i]<=arr[i-1]) THEN
+        c:=arr[i];
+        arr[i]:=arr[i-1];
+        arr[i-1]:=c;
+    END_IF
+END_FOR
+Write(arr);
+END
